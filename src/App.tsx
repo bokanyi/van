@@ -2,18 +2,20 @@ import { Route } from './components/Route'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
-import { References } from './pages/References'
+import { Events } from './pages/Events'
 import Navbar from './components/Navbar'
+import { Footer } from './components/Footer'
 
 const App = () => {
 
   return (
-    <div>
+    <div className="flex flex-col items-center whitespace-pre-wrap relative">
       <Navbar/>
      <Route path="/" > <Home/></Route>
      <Route path="/about" > <About/></Route>
+     <Route path="/events" > <Events/></Route>
      <Route path="/contact" > <Contact/></Route>
-     <Route path="/references" > <References/></Route>
+     <Footer/>
     </div>
   )
 }

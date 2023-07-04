@@ -1,44 +1,26 @@
 import { BehaviorSubject } from "rxjs";
 
 
-type Reference = {
-    name: string;
-    description: string;
-    details: string;
-    link: string;
-  };
-
 type Content = {
   structure: {
+    main: string;
     about: string;
-    references: string;
+    artists: string;
+    events: string;
     contact: string;
-    prices: string;
   };
-  name: string;
-  position: string;
-  about: string;
-  resume: string;
-  reference: Reference[];
+ 
 };
 
 const hungarian: Content = {
     structure: {
+      main: "Főoldal",
         about: "Rólunk",
-        references: "Referenciák",
+        artists: "Művészek",
+        events: "Események",
         contact: "Kapcsolat",
-        prices: "Áraink'",
       },
-      name: "Vizi Gábor",
-      position: "Közlekedésépítő mérnök, Felelős műszaki vezető",
-      about: "string",
-      resume: "string",
-      reference: [{
-        name: "string",
-        description: "string",
-        details: "string",
-        link: "string",
-      }],
+  
 }
 
 export const $content = new BehaviorSubject<Content>(hungarian)

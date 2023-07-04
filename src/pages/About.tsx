@@ -1,6 +1,11 @@
+import { Page } from '../components/Page'
 
 export const About = () => {
   return (
-    <div>About</div>
+    <div>
+    <Page custom={"min-h-screen py-40 bg-light-rose"}>
+      <h1>About</h1>
+    </Page>
+  </div>
   )
 }

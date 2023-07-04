@@ -10,5 +10,5 @@ type Props = {
 export const Route: FC<Props> = ({ path, children }) => {
   const currentPath = useGlobal($path);
   if (path != currentPath) return null;
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
