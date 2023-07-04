@@ -1,11 +1,7 @@
 import { navigate } from '../states/routes'
-import useGlobal from "../hooks/useGlobal";
-import {$content} from "../states/content"
 import { useState } from 'react';
-import { Page } from './Page';
 
 export default function Navbar() {
-  const content = useGlobal($content)
 
   const [open, setOpen] = useState(false)
 

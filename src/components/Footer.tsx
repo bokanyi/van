@@ -1,5 +1,3 @@
-import { navigate } from "../states/routes";
-import useGlobal from "../hooks/useGlobal";
 import { Page } from "./Page";
 
 
