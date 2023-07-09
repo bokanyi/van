@@ -3,8 +3,10 @@ import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
 import { Events } from './pages/Events'
-import Navbar from './components/Navbar'
+import {Info} from './pages/Info'
+import {Navbar} from './components/Navbar'
 import { Footer } from './components/Footer'
+import { Locations } from './pages/Locations'
 
 const App = () => {
 
@@ -15,6 +17,8 @@ const App = () => {
      <Route path="/about" > <About/></Route>
      <Route path="/events" > <Events/></Route>
      <Route path="/contact" > <Contact/></Route>
+     <Route path="/locations" > <Locations/></Route>
+     <Route path="/info" > <Info/></Route>
      <Footer/>
     </div>
   )

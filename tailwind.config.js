@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Montserrat', 'sans-serif'],
+        'prata': ['Prata', 'sans-serif']
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
