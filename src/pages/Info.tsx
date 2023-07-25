@@ -3,7 +3,7 @@ import { navigate } from '../states/routes'
 
 export const  Info = () => {
   return (
-    <div className="h-screen w-screen pt-40 bg-dark-blue fixed z-10 flex flex-col justify-between"
+    <div className="h-screen w-screen md:pt-40 pt-20 bg-dark-blue fixed z-10 flex flex-col justify-between"
         >
         <button onClick={() => {navigate("/about")}}  className=' grow text-white  hover:bg-blue-green text-left px-1 md:px-10'>
            <h1>RÓLUNK</h1> 
@@ -11,8 +11,12 @@ export const  Info = () => {
    
         <hr className='border-t-2 border-blue-green'/>
         <button onClick={() => {navigate("/events") }} className=' grow text-white  hover:bg-blue-green text-left px-1 md:px-10'>
-            <h1>PROGRAMOK</h1>
+            <h1>ESEMÉNYEK</h1>
             </button>
+        <hr className='border-t-2 border-blue-green'/>
+        <button onClick={() =>{ navigate("/tickets")}} className='grow text-white  hover:bg-blue-green text-left px-1 md:px-10'> 
+         <h1>JEGYEK/ELŐREGISZTRÁCIÓ</h1>
+        </button>
         <hr className='border-t-2 border-blue-green'/>
         <button onClick={() =>{ navigate("/locations")}} className='grow text-white  hover:bg-blue-green text-left px-1 md:px-10'> 
          <h1>HELSZÍNEK</h1>
