@@ -3,13 +3,18 @@ import { Page } from "../components/Page";
 // import { Card } from "../components/Card";
 import useGlobal from "../hooks/useGlobal";
 import { $content } from "../states/content";
+import supabase from "../config/supabaseClient";
+import Form from "../components/Form";
 
 export const Home = () => {
   const content = useGlobal($content);
+
+  console.log(supabase)
   return (
     <div>
       {/* <Page custom={" w-screen bg-orange py-40"}> */}
       <div className="w-screen ">
+       
         <Carousel
         //  slides={["/pexels-cottonbro-studio-7095504.jpg"]}
         >
@@ -81,6 +86,7 @@ export const Home = () => {
           
         </Carousel>
       </div>
+      <Form></Form>
       <Page custom="">
         <div className=" max-w m-auto p-10">
           <h3>{content.story[0]}</h3>

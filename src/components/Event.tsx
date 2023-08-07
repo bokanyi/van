@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { Artists } from "./Artists";
 
 type Details = {
   title: string,
@@ -10,22 +11,24 @@ type Props = {
   date: string;
   img: string;
   details: Details[];
+  images: string[];
+  artists: string[];
+  index: number;
   setOpen: () => void;
   // slides: string[]
 };
 
-export const Event: FC<Props> = ({ title, date, details, img, setOpen }) => {
+export const Event: FC<Props> = ({ title, date, details, setOpen, images, artists, index }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
 
   return (
- 
-     
+
         <div
           className={`grow flex flex-col gap-10 md:p-10 p-4 hover:bg-blue-green bg-cover`}
           style={{
             color: "white",
-            backgroundImage: `url('${img}')`,
-            height: `${detailsOpen ? "60vh" : "auto"}`,
+            // backgroundImage: `url('${img}')`,
+            height: `${detailsOpen ? "auto" : "auto"}`,
             justifyContent: `${detailsOpen ? "" : "center"}`,
           }}
         >
@@ -49,7 +52,7 @@ export const Event: FC<Props> = ({ title, date, details, img, setOpen }) => {
             </div>
           </div>
           {detailsOpen && (
-
+            <>
             <div className="md:flex md:justify-between">
 
              { details.map((detail, index) => {
@@ -62,6 +65,13 @@ export const Event: FC<Props> = ({ title, date, details, img, setOpen }) => {
              })}
                         {/* <hr /> */}
             </div>
+              { index===0 && <Artists
+               images={images}
+               artists={artists}
+              >
+               
+               </Artists>}
+            </>
           )}
         </div>
 

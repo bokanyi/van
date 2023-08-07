@@ -7,6 +7,7 @@ import {Navbar} from './components/Navbar'
 import { Footer } from './components/Footer'
 import { Locations } from './pages/Locations'
 import { Events } from './pages/Events'
+import { Test } from './pages/Test'
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
      <Route path="/locations" > <Locations/></Route>
      <Route path="/info" > <Info/></Route>
      <Route path="/events" > <Events/></Route>
+     <Route path="/form" > <Test/></Route>
      <Footer/>
     </div>
   )

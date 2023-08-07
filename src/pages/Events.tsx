@@ -3,6 +3,9 @@ import useGlobal from "../hooks/useGlobal";
 import { $content } from "../states/content";
 import { Event } from "../components/Event";
 import { notification } from 'antd';
+// import {Artists} from "../components/Artists"
+import { CustomButton } from "../components/CustomButton";
+import Form from "../components/Form";
 
 export const Events = () => {
   const content = useGlobal($content);
@@ -77,6 +80,7 @@ export const Events = () => {
 
   return (
     <div className="min-h-screen w-screen relative md:pt-40 pt-20 flex flex-col wrap bg-dark-blue ">
+      {/* <Form></Form> */}
       {contextHolder}
       {open && (
         <div className="absolute top-0 h-screen w-screen z-20 backdrop-blur-md flex justify-center">
@@ -131,8 +135,7 @@ export const Events = () => {
               </select>
               <div className="flex gap-4">
                 <label htmlFor="">
-                  Elfogadom, hogy a regisztráció helyszíni fizetési
-                  kötelezettséggel jár!
+                  A regisztrációval elfogadom a Felhasználási feltételeket.
                 </label>
                 <input
                   type="checkbox"
@@ -143,7 +146,17 @@ export const Events = () => {
                   required
                 />
               </div>
-              <button type="submit">REGISZTRÁCIÓ</button>
+              <CustomButton
+              // text="REGISZTRÁCIÓ"
+              type="submit"
+              custom=" bg-blue-green color text-white hover:bg-dark-blue "
+              >
+                <p className="transition-all  duration-700
+                  hover:scale-110 ">
+
+                REGISZTRÁCIÓ
+                </p>
+              </CustomButton>
             </form>
           </div>
 
@@ -159,6 +172,9 @@ export const Events = () => {
               img={event.img}
               details={event.details}
               setOpen={()=> handleClick(event.title)}
+              images={event.images}
+              artists={event.artists}
+              index={index}
             />
             {index < 3 && <hr className="border-t-2 border-blue-green" />}
           </div>

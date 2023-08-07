@@ -28,10 +28,10 @@ export const Carousel:FC<Props> = ({
         disableOnInteraction: true
     }}
     >
-      <div  className='absolute w-32 h-32 bottom-[10%] right-[20%] z-10'>
+      <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
       <a href="http://www.veszprembalaton2023.hu " target='blank'>
 
-      <img src="/VEB2023-logo_hu.png" alt="" />
+      <img className="invert" src="/VEB2023-logo_hu.png" alt="" />
       </a>
       </div>
 

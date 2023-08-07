@@ -11,6 +11,9 @@ type Event = {
   title: string;
   img: string;
   details: Details[];
+  images: string[];
+  artists: string[]
+
 };
 
 type Content = {
@@ -64,7 +67,9 @@ const hungarian: Content = {
         {title:"Classic:",
         description: "Hartmann Domonkos (cselló), Kondorosi Karolina (hegedű), Sebestyén Patrik (trombita), Mitró Apolka"}, 
         {title: "Jazz:",
-        description:" Sebestyén Patrik (trombita), Uher Bálint (szaxofon), Piller Balázs (zongora), Tasner Levente (ének), Román Iván (hegedű)m Richter Ambrus (dob), Miskolczi Márk (nagybőgő)"}],
+        description:" Sebestyén Patrik (trombita), Uher Bálint (szaxofon), Piller Balázs (zongora), Tasner Levente (ének), Román Iván (hegedű), Richter Ambrus (dob), Miskolczi Márk (nagybőgő)"}],
+      images: ["01/hartmann.jpg", "01/kondorosi.jpg", "01/sebestyen.jpg", "01/mitro.jpeg","01/uher.jpg", "01/piller.jpg", "01/tasner.jpeg", "01/roman.jpg"],
+      artists: ["Hartmann Domonkos", "Kondorosi Karolina", "Sebestyén Patrik", "Mitró Apolka","Uher Bálint", "Piller Balázs","Tasner Levente", "Román Iván"]
     },
     {
       date: "2023. október 27. péntek",
@@ -73,6 +78,8 @@ const hungarian: Content = {
       img: "/pexels_artist03.jpg",
       details:[{title:"",
       description:""}],
+      images: [""],
+      artists: [""],
     },
     {
       date: "2023. október 28. szombat",
@@ -81,6 +88,8 @@ const hungarian: Content = {
       img: "/pexels_artist02.jpg",
       details:[{title:"",
       description: ""}],
+      images: [""],
+      artists: [""],
     },
     {
       date: "2023. november 25. szombat",
@@ -89,6 +98,8 @@ const hungarian: Content = {
       img: "/pexels-cottonbro-studio-7095504.jpg",
       details:[{title:"",
       description: ""}],
+      images: [""],
+      artists: [""],
     },
   ],
 };
