@@ -5,7 +5,7 @@ import { Event } from "../components/Event";
 import { notification } from 'antd';
 // import {Artists} from "../components/Artists"
 import { CustomButton } from "../components/CustomButton";
-import Form from "../components/Form";
+// import Form from "../components/Form";
 
 export const Events = () => {
   const content = useGlobal($content);
