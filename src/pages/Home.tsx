@@ -65,7 +65,7 @@ export const Home = () => {
           <p className="grow md:w-[50%]">{content.story[1]}</p>
         </div>
       </Page> */}
-      <Page custom="bg-orange border-4 h-auto md:h-screen md:p-40 p-10">
+      <Page custom="bg-orange h-auto md:h-screen md:p-40 p-10">
         {/* <div className="flex items-center  justify-center"> */}
 
       <iframe className="border:none overflow-hidden
