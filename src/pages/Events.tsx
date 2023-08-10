@@ -83,7 +83,7 @@ export const Events = () => {
       {/* <Form></Form> */}
       {contextHolder}
       {open && (
-        <div className="absolute top-0 h-screen w-screen z-20 backdrop-blur-md flex justify-center">
+        <div className="fixed top-0 h-screen w-screen z-20 backdrop-blur-md flex justify-center">
           <div></div>
           <div className="m-auto max-w-md bg-white z-20 flex flex-col  p-6 md:p-10">
             <button className="self-end" onClick={() => setOpen(false)}>
@@ -170,6 +170,7 @@ export const Events = () => {
               title={event.title}
               date={event.dateShort}
               img={event.img}
+              description={event.description}
               details={event.details}
               setOpen={()=> handleClick(event.title)}
               images={event.images}

@@ -4,7 +4,7 @@ import { Page } from "../components/Page";
 import useGlobal from "../hooks/useGlobal";
 import { $content } from "../states/content";
 import supabase from "../config/supabaseClient";
-import Form from "../components/Form";
+// import Form from "../components/Form";
 
 export const Home = () => {
   const content = useGlobal($content);
@@ -24,74 +24,62 @@ export const Home = () => {
           style={{color: "white", backgroundImage: `url('${event.img}')`}}
           >
             {/* <img className="absolute h-screen z-0" src={`${event.img}`} alt="" /> */}
-            <div className="w-[520px] relative text-right m-auto z-10">
+            <div className="md:w-[520px] px-6 relative text-center md:text-right m-auto z-10">
               <h3 className=" inline ">{event.title}</h3>
               <p className=" ">{event.date}</p>
             </div >
           </div>
             )
           })}
-{
-  /*
-
-          <div className="w-screen h-screen bg-orange flex">
-            <div className="w-[520px] relative text-right m-auto">
-              <h1 className="font-prata inline leading-3">Veszprémiek</h1>
-              <h3 className=" ">a Nagyvilágban</h3>
-            </div>
-          </div>
-          <div className="w-screen h-screen bg-black flex">
-            <img
-              className="object-cover w-screen h-screen"
-              src="/pexels-cottonbro-studio-7095504.jpg"
-              alt=""
-            />
-          </div>
-          <div className="w-screen h-screen flex flex-col relative justify-center items-center">
-            <div className="flex flex-col md:absolute md:right-[10%] md:top-[30%]">
-              <div className="flex ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="w-10 h-10 self-center"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-                <h3 className="italic">2023 ősz</h3>
-              </div>
-            </div>
-            <div className="md:absolute md:left-[10%] md:bottom-[30%]">
-              <h3>Classic+ koncert sorozat</h3>
-              <h3 className="italic">Veszprém</h3>
-            </div>
-          </div>
-          <div className="w-screen h-screen bg-light-rose flex justify-center items-center">
-            <img
-              src="/kotta_02.png"
-              alt=""
-              className="absolute left-[48%] top-[17%]"
-            />
-            <h1 className="italic ">Hamarosan...</h1>
-          </div>
-  */
-}
-
           
         </Carousel>
       </div>
-      <Form></Form>
-      <Page custom="">
-        <div className=" max-w m-auto p-10">
-          <h3>{content.story[0]}</h3>
+      <Page custom="bg-orange h-auto">
+  
+          {/* <hr /> */}
+          <div className="p-10 md:p-40" >
+          <h3 className="italic animate-lineUp"  >{content.story[0]}</h3>
+          </div>
+        {/* <hr /> */}
+
+      </Page>
+      <Page custom="bg-orange h-auto">
+        <div className=" max-w m-auto p-10 flex md:flex-row flex-col gap-10">
+          <div className="grow md:w-[50%] border:none; bg-contain">
+
+      <img    src="/hordos_johanna.jpg" alt="" />
+          </div >
+      <div className="grow md:w-[50%] flex flex-col gap-10 justify-between">
+
+          <p className="animate-lineUp">{content.story[2]}</p>
+      <h3 className="italic text-end">Hordós Johanna</h3>
+          {/* <p >{content.story[3]}</p> */}
+      </div>
         </div>
       </Page>
+      {/* <Page custom="bg-orange h-auto">
+        <div className="h-screen items-center m-auto p-10 md:flex flex-col gap-10">
+      <iframe className="grow md:w-[50%] border:none overflow-hidden 
+      max-w-[560px] max-h[314]
+      "  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FVeszpremBalaton2023%2Fvideos%2F1131369687497022%2F&show_text=false&width=560&t=0"   scrolling="no"  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" ></iframe>
+          <p className="grow md:w-[50%]">{content.story[1]}</p>
+        </div>
+      </Page> */}
+      <Page custom="bg-orange border-4 h-auto md:h-screen md:p-40 p-10">
+        {/* <div className="flex items-center  justify-center"> */}
+
+      <iframe className="border:none overflow-hidden
+      grow md:h-full
+      "  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FVeszpremBalaton2023%2Fvideos%2F1131369687497022%2F&show_text=false&width=560&t=0" width="560" height="314"   scrolling="no"  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" ></iframe>
+        {/* </div> */}
+       
+      
+
+      </Page>
+      <Page  custom="bg-orange h-auto px-10 md:px-40 pb-10 md:pb-40" >
+             <p >{content.story[3]}</p>
+        </Page>
+
     </div>
   );
 };

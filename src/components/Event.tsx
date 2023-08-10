@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import { Artists } from "./Artists";
+import { CustomButton } from "./CustomButton";
 
 type Details = {
   title: string,
@@ -10,6 +11,7 @@ type Props = {
   title: string;
   date: string;
   img: string;
+  description: string;
   details: Details[];
   images: string[];
   artists: string[];
@@ -18,7 +20,7 @@ type Props = {
   // slides: string[]
 };
 
-export const Event: FC<Props> = ({ title, date, details, setOpen, images, artists, index }) => {
+export const Event: FC<Props> = ({ title, date, description, details, setOpen, images, artists, index }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
 
   return (
@@ -34,27 +36,41 @@ export const Event: FC<Props> = ({ title, date, details, setOpen, images, artist
         >
           <div className="md:flex justify-between items-center">
             <h3 className="z-10">{title}</h3>
-            <div className="md:flex justify-between items-end">
-              <button
+            <div className="md:flex justify-between items-center">
+              <CustomButton
+              custom="grow text-white  text-left px-1 md:px-10"
+              type="button"
                 // onClick={() => {}}
-                className=" grow text-white  text-left px-1 md:px-10"
+                // className=" grow text-white  text-left px-1 md:px-10"
                 onClick={() => setOpen()}
               >
+                <p className="transition-all  duration-700
+                  hover:scale-110 ">
+
                 előregisztráció
-              </button>
-              <button
+                </p>
+              </CustomButton>
+              <CustomButton
+              custom="grow text-white  hover:bg-blue-green text-left px-1"
+              type="button"
                 onClick={() => setDetailsOpen(!detailsOpen)}
-                className=" grow text-white  hover:bg-blue-green text-left px-1 md:px-10"
+                // className=
               >
-                infó
-              </button>
+                <p className="transition-all  duration-700
+                  hover:scale-110 ">
+                  infó
+                  </p>
+              </CustomButton>
               <p className=" ">{date}</p>
             </div>
           </div>
           {detailsOpen && (
             <>
+                <hr />
+              <div>
+                <p>{description}</p>
+              </div>
             <div className="md:flex md:justify-between">
-
              { details.map((detail, index) => {
               return (
               <div key={index} className="grow md:w-[50%]">
@@ -69,7 +85,6 @@ export const Event: FC<Props> = ({ title, date, details, setOpen, images, artist
                images={images}
                artists={artists}
               >
-               
                </Artists>}
             </>
           )}
