@@ -15,6 +15,10 @@ export default {
         "blue-green": "#4e9687",
         "dark-blue": "#21414d",
       },
+      boxShadow: {
+        'inner': 'inset 100vw 0 0 0 #21414d',
+        'none': 'inset 0 0 0 0 #4e9687',
+      },
       keyframes: {
         lineUp: {
           " 0%": {

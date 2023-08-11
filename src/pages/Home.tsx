@@ -13,8 +13,14 @@ export const Home = () => {
   return (
     <div>
       {/* <Page custom={" w-screen bg-orange py-40"}> */}
-      <div className="w-screen ">
+      <div className="w-screen relative">
+      <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
+      <a href="http://www.veszprembalaton2023.hu " target='blank'>
+      <img className="invert" src="/VEB2023-logo_hu.png" alt="" />
+      </a>
+      </div>
         <Carousel
+        delay={8000}
         //  slides={["/pexels-cottonbro-studio-7095504.jpg"]}
         >
           {content.events.map((event) => {
@@ -36,36 +42,60 @@ export const Home = () => {
           })}
         </Carousel>
       </div>
-      <Page custom="bg-orange h-auto">
+
+      <Page custom="bg-orange h-screen">
         {/* <hr /> */}
-        <div className="p-10 md:p-40">
-          <h3 className="italic animate-lineUp">{content.story[0]}</h3>
+        <div className="max-w-4xl p-10 italic">
+        <h3 className="bg-dark-blue text-white md:bg-transparent md:text-black inline md:hover:text-white underline transition-shadow shadow-none duration-500 md:hover:shadow-inner ">Veszprémi kötődésű zenészek</h3><h3 className="inline" >, akik pályafutásuk során messzire sodródtak a nagyvilágban, <u>most hazatérnek</u>, és négy alkalmas élménykoncertre invitálnak az őszi hónapokban</h3>
+          {/* <h3 className="italic animate-lineUp">{content.story[0]}</h3> */}
         </div>
         {/* <hr /> */}
       </Page>
+
       <Page custom="bg-orange ">
-        <div className=" max-w m-auto p-10 flex md:flex-row flex-col gap-10">
+        <div className="max-w-4xl m-auto p-10 flex md:flex-row flex-col gap-10">
           <div className="grow md:w-[50%] border:none; bg-contain">
             <img src="/hordos_johanna.jpg" alt="" />
           </div>
-          <div className="grow md:w-[50%] flex flex-col gap-10 justify-between">
-            <p className="animate-lineUp">{content.story[2]}</p>
+          <div className="grow md:w-[50%] flex flex-col justify-between">
+            <div className="md:hidden ">
+            <h1 className=" italic  ">"</h1>
+            {content.quotation.map((sections) => {
+                return (
+                  <div>
+                    <p>{sections}</p>
+                    <br />
+                  </div>
+                )
+              })}
+                <h1 className=" italic text-end">"</h1>
+            </div>
+            <div className="hidden md:block">
+              <h1 className=" italic  ">"</h1>
+            <Carousel
+             delay={18000}
+            >
+              {content.quotation.map((sections) => {
+                return (
+                  <div>
+                    <p>{sections}</p>
+                  </div>
+                )
+              })}
+            </Carousel>
+              <h1 className=" italic text-end">"</h1>
+            </div>
+            {/* <p className="md:text-sm/[2em] ">{content.story[2]}</p> */}
             <h3 className="italic text-end">Hordós Johanna</h3>
             {/* <p >{content.story[3]}</p> */}
           </div>
         </div>
       </Page>
-      {/* <Page custom="bg-orange h-auto">
-        <div className="h-screen items-center m-auto p-10 flex md:flex-row flex-col gap-10 " >
-      <iframe className="grow md:w-[50%] border:none overflow-hidden 
-      md:max-w-[560px] md:h[314px] 
-      "  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FVeszpremBalaton2023%2Fvideos%2F1131369687497022%2F&show_text=false&width=560&t=0"     scrolling="no"  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" ></iframe>
-          <p className="grow md:w-[50%]">{content.story[1]}</p>
-        </div>
-      </Page> */}
+
       <Page custom=" bg-orange px-10 md:p-40  m-auto items-center">
-        <p>{content.story[3]}</p>
+        <p>{content.story[2]}</p>
       </Page>
+
       <Page custom="bg-orange h-screen ">
         <div className="flex w-96 max-w[800px] max-height-[448px] md:p-40 p-10 relative items-center  justify-center">
           <iframe
@@ -80,6 +110,7 @@ export const Home = () => {
           ></iframe>
         </div>
       </Page>
+      
     </div>
   );
 };

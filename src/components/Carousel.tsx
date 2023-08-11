@@ -6,11 +6,14 @@ import "swiper/css/autoplay";
 import { FC } from 'react';
 import { Autoplay } from 'swiper/modules';
 
+
 type Props = {
+  delay: number;
   children: ReactNode;
 }
 
-export const Carousel:FC<Props> = ({
+export const Carousel:FC<Props> = ({ 
+    delay,
    children
   }) => {
 
@@ -24,16 +27,16 @@ export const Carousel:FC<Props> = ({
      
       modules={[Autoplay]}
       autoplay={{
-        delay: 8000,
+        delay: delay,
         disableOnInteraction: true
     }}
     >
-      <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
+      {/* <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
       <a href="http://www.veszprembalaton2023.hu " target='blank'>
 
       <img className="invert" src="/VEB2023-logo_hu.png" alt="" />
       </a>
-      </div>
+      </div> */}
 
       {children.map((child)=> 
         <SwiperSlide 
