@@ -43,7 +43,7 @@ export const Home = () => {
         </div>
         {/* <hr /> */}
       </Page>
-      <Page custom="bg-orange h-auto">
+      <Page custom="bg-orange h-max">
         <div className=" max-w m-auto p-10 flex md:flex-row flex-col gap-10">
           <div className="grow md:w-[50%] border:none; bg-contain">
             <img src="/hordos_johanna.jpg" alt="" />
