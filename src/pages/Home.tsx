@@ -63,6 +63,9 @@ export const Home = () => {
           <p className="grow md:w-[50%]">{content.story[1]}</p>
         </div>
       </Page> */}
+      <Page custom="bg-orange px-10 md:px-40  m-auto items-center">
+        <p>{content.story[3]}</p>
+      </Page>
       <Page custom="bg-orange  ">
         <div className="flex w-96 max-w[800px] max-height-[448px] md:p-40 p-10 relative items-center  justify-center">
           <iframe
@@ -76,9 +79,6 @@ export const Home = () => {
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
           ></iframe>
         </div>
-      </Page>
-      <Page custom="bg-orange px-10 md:px-40 pb-10 md:pb-40">
-        <p>{content.story[3]}</p>
       </Page>
     </div>
   );
