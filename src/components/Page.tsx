@@ -8,7 +8,7 @@ type Props= {
 
 export const Page: FC<Props> = ({children, custom}) => {
   return (
-    <div className={` transition-colors w-screen h-screen flex justify-center ${custom}`}> 
+    <div className={` transition-colors w-screen flex justify-center ${custom}`}> 
 
             {children}
  

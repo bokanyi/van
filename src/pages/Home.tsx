@@ -43,7 +43,7 @@ export const Home = () => {
         </div>
         {/* <hr /> */}
       </Page>
-      <Page custom="bg-orange h-max">
+      <Page custom="bg-orange ">
         <div className=" max-w m-auto p-10 flex md:flex-row flex-col gap-10">
           <div className="grow md:w-[50%] border:none; bg-contain">
             <img src="/hordos_johanna.jpg" alt="" />
@@ -63,10 +63,10 @@ export const Home = () => {
           <p className="grow md:w-[50%]">{content.story[1]}</p>
         </div>
       </Page> */}
-      <Page custom="bg-orange px-10 md:px-40  m-auto items-center">
+      <Page custom=" bg-orange px-10 md:p-40  m-auto items-center">
         <p>{content.story[3]}</p>
       </Page>
-      <Page custom="bg-orange  ">
+      <Page custom="bg-orange h-screen ">
         <div className="flex w-96 max-w[800px] max-height-[448px] md:p-40 p-10 relative items-center  justify-center">
           <iframe
             className="border:none overflow-hidden
