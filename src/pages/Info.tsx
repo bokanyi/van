@@ -6,8 +6,8 @@ export const Info = () => {
   return (
     <Page custom=" bg-dark-blue h-screen fixed">
       <div
-        className="h-screen w-screen 
-     md:pt-40 pt-20 bg-dark-blue fixed z-10 flex flex-col justify-between"
+        className="
+      bg-dark-blue fixed z-10 flex flex-col h-96 justify-between"
       >
         <div
           className="grow flex items-center justify-center hover:bg-blue-green cursor-pointer"
@@ -15,19 +15,19 @@ export const Info = () => {
             navigate("/about");
           }}
         >
-          <div className="w-[800px] px-10 flex text-white  hover:bg-blue-green text-left ">
+          <div className="max-w-4xl px-10 flex text-white  hover:bg-blue-green text-left ">
             <h3>RÓLUNK</h3>
           </div>
         </div>
         <hr className="border-t-2 border-blue-green" />
 
         <div
-          className="grow flex items-center justify-center hover:bg-blue-green cursor-pointer"
+          className="grow flex items-center  hover:bg-blue-green cursor-pointer"
           onClick={() => {
             navigate("/events");
           }}
         >
-          <div className="w-[800px] px-10 flex text-white  hover:bg-blue-green text-left ">
+          <div className="md:w-[56rem] px-10 flex text-white  text-left ">
             <h3>KONCERTEK</h3>
           </div>
         </div>
@@ -48,12 +48,12 @@ export const Info = () => {
         <hr className="border-t-2 border-blue-green" /> */}
 
         <div
-          className="grow flex items-center justify-center hover:bg-blue-green cursor-pointer"
+          className="grow flex flex-col justify-center hover:bg-blue-green cursor-pointer"
           onClick={() => {
             navigate("/contact");
           }}
         >
-          <div className="w-[800px] px-10 flex text-white  hover:bg-blue-green text-left ">
+          <div className="md:w-[56rem] text-end text-white  hover:bg-blue-green  ">
             <h3>KAPCSOLAT</h3>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { FC, useState, useRef } from "react";
 import { Artists } from "./Artists";
 import { CustomButton } from "./CustomButton";
-import { PlusOutlined, CloseOutlined } from "@ant-design/icons";
+import { CaretDownOutlined , CloseOutlined } from "@ant-design/icons";
 // import useClickOutside from "../hooks/useClickOutside"
 
 type Details = {
@@ -80,14 +80,14 @@ export const Event: FC<Props> = ({
           {detailsOpen ? (
             <CloseOutlined className="text-xl" />
           ) : (
-            <PlusOutlined className="text-xl" />
+            <CaretDownOutlined  className="text-xl" />
           )}
        </div>
             <div className="text-center">
 
           <CustomButton
             disabled={!event.open}
-            custom="text-white text-left px-1 md:px-10 border-2 disabled :opacity-75 border-b-4 rounded-md hover:bg-dark-blue"
+            custom="text-white text-left px-1 md:px-10 border-2 border-b-4 rounded-md hover:bg-dark-blue"
             type="button"
             onClick={() => (setOpen(!open), setTitle(event.title))}
           >
@@ -106,7 +106,7 @@ export const Event: FC<Props> = ({
           {detailsOpen ? (
             <CloseOutlined className="text-xl" />
           ) : (
-            <PlusOutlined className="text-xl" />
+            <CaretDownOutlined className="text-xl" />
           )}
        </div>
 

@@ -4,7 +4,10 @@ import { Page } from "../components/Page";
 import useGlobal from "../hooks/useGlobal";
 import { $content } from "../states/content";
 import supabase from "../config/supabaseClient";
-// import { CustomButton } from "../components/CustomButton";
+import { CustomButton } from "../components/CustomButton";
+import {CaretRightOutlined} from "@ant-design/icons";
+import { navigate } from "../states/routes";
+
 // import Form from "../components/Form";
 
 export const Home = () => {
@@ -44,13 +47,13 @@ export const Home = () => {
       </div>
       
       <Page custom="bg-orange h-screen">
-        <div className="max-w-4xl p-10 italic">
-        <h3 className="bg-dark-blue text-white md:bg-transparent md:text-black inline md:hover:text-white underline transition-shadow shadow-none duration-500 md:hover:shadow-inner ">Veszprémi kötődésű zenészek</h3><h3 className="inline" >, akik pályafutásuk során messzire sodródtak a nagyvilágban, <u>most hazatérnek</u>, és négy alkalmas élménykoncertre invitálnak az őszi hónapokban</h3>
+        <div className="max-w-4xl md:p-0 p-10 italic">
+        <h3 className="bg-light-rose inline md:hover:text-white underline ">Veszprémi kötődésű zenészek</h3><h3 className="inline" >, akik pályafutásuk során messzire sodródtak a nagyvilágban, <u>most hazatérnek</u>, és négy alkalmas élménykoncertre invitálnak az őszi hónapokban</h3>
         </div>
       </Page>
 
-      <Page custom="bg-orange ">
-        <div className="max-w-4xl m-auto p-10 flex md:flex-row flex-col gap-10">
+      <Page custom="bg-light-rose md:h-screen">
+        <div className="max-w-4xl m-auto p-10 md:p-0 flex md:flex-row flex-col gap-10">
           <div className="grow md:w-[50%] border:none; bg-contain">
             <img src="/hordos_johanna.jpg" alt="" />
           </div>
@@ -84,6 +87,20 @@ export const Home = () => {
             </div>
             {/* <p className="md:text-sm/[2em] ">{content.story[2]}</p> */}
             <h3 className="italic text-end">Hordós Johanna</h3>
+            <div
+        className="self-end h-20 relative "
+        >
+
+            <CustomButton
+        type="button"
+        custom="self-end bg-orange flex border-2 border-b-4 rounded-md hover:bg-light-rose hover:translate-y-[-0.2rem] hover:border-b-8 absolute right-0 bottom-0"
+        onClick={() => {
+          navigate("/about");
+        }}        >
+          <p >Rólunk</p>
+          <CaretRightOutlined className="text-xl"/>
+        </CustomButton>
+        </div>
             {/* <p >{content.story[3]}</p> */}
           </div>
         </div>
@@ -93,13 +110,15 @@ export const Home = () => {
         <p>{content.story[2]}</p>
       </Page> */}
 
-      {/* <Page custom=" bg-orange px-10 md:p-40 flex-col m-auto items-center">
-          <h1>KONCERTEK</h1>
-        <div className="max-w-4xl flex flex-col">
+      <Page custom="bg-orange md:h-screen py-10 md:p-0 flex-col m-auto items-center">
+        <div className="max-w-4xl md:h-full flex flex-col justify-between md:py-40 relative">
+
+          <h1 className="self-start">KONCERTEK</h1>
+        <div className="flex flex-col md:gap-4 gap-4">
           {content.events.map((event, index)=> {
             return <>
             
-            <div className="grow wmax-w-4xl flex justify-between">
+            <div className="grow md:w-[56rem] flex justify-between ">
               
               <p>{event.title}</p>
               <p>{event.dateShort}</p>
@@ -110,15 +129,25 @@ export const Home = () => {
             </>
           })}
         </div>
+        <div
+        className="self-end h-20 relative "
+        >
+
         <CustomButton
         type="button"
-        >
-          <p>Bővebben</p>
+        custom="self-end bg-light-rose flex border-2 border-b-4 rounded-md hover:bg-orange hover:translate-y-[-0.2rem] hover:border-b-8 absolute bottom-0 right-0"
+        onClick={() => {
+          navigate("/events");
+        }}        >
+          <p >Bővebben</p>
+          <CaretRightOutlined className="text-xl"/>
         </CustomButton>
+        </div>
         
-      </Page> */}
+        </div>
+      </Page>
 
-      <Page custom="bg-orange h-screen ">
+      <Page custom="bg-orange md:h-[500px] min-h-[300px] ">
         <div className="flex w-96 max-w[800px] max-height-[448px] md:p-40 p-10 relative items-center  justify-center">
           <iframe
             className="border:none overflow-hidden
