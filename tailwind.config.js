@@ -41,6 +41,19 @@ export default {
           "0%": { width: "0%" },
           "100%": { width: "100%" },
         },
+        rotateX : {
+          "0%": {
+            opacity: "0",
+            transform: "rotateX(-90deg)",
+          },
+          "50%" : {
+            transform: "rotateX(-20deg)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "rotateX(0deg)",
+          }
+        },
         back: {
           "0%": { backgroundSize: "0 200%" },
         },
@@ -54,6 +67,7 @@ export default {
       },
       animation: {
         lineUp: "lineUp 5s ease-out ",
+        rotateX: "300ms (60ms) ease-in-out forwards",
         back: "back .7s infinite steps(1)",
         text: "text calc(var(--n)*.3s) steps(var(--n)) forwards;",
         slide: "slide 3.5s   steps(30, end) infinite",

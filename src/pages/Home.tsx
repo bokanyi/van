@@ -4,6 +4,7 @@ import { Page } from "../components/Page";
 import useGlobal from "../hooks/useGlobal";
 import { $content } from "../states/content";
 import supabase from "../config/supabaseClient";
+// import { CustomButton } from "../components/CustomButton";
 // import Form from "../components/Form";
 
 export const Home = () => {
@@ -21,7 +22,6 @@ export const Home = () => {
       </div>
         <Carousel
         delay={8000}
-        //  slides={["/pexels-cottonbro-studio-7095504.jpg"]}
         >
           {content.events.map((event) => {
             return (
@@ -42,14 +42,11 @@ export const Home = () => {
           })}
         </Carousel>
       </div>
-
+      
       <Page custom="bg-orange h-screen">
-        {/* <hr /> */}
         <div className="max-w-4xl p-10 italic">
         <h3 className="bg-dark-blue text-white md:bg-transparent md:text-black inline md:hover:text-white underline transition-shadow shadow-none duration-500 md:hover:shadow-inner ">Veszprémi kötődésű zenészek</h3><h3 className="inline" >, akik pályafutásuk során messzire sodródtak a nagyvilágban, <u>most hazatérnek</u>, és négy alkalmas élménykoncertre invitálnak az őszi hónapokban</h3>
-          {/* <h3 className="italic animate-lineUp">{content.story[0]}</h3> */}
         </div>
-        {/* <hr /> */}
       </Page>
 
       <Page custom="bg-orange ">
@@ -92,9 +89,34 @@ export const Home = () => {
         </div>
       </Page>
 
-      <Page custom=" bg-orange px-10 md:p-40  m-auto items-center">
+      {/* <Page custom=" bg-orange px-10 md:p-40  m-auto items-center">
         <p>{content.story[2]}</p>
-      </Page>
+      </Page> */}
+
+      {/* <Page custom=" bg-orange px-10 md:p-40 flex-col m-auto items-center">
+          <h1>KONCERTEK</h1>
+        <div className="max-w-4xl flex flex-col">
+          {content.events.map((event, index)=> {
+            return <>
+            
+            <div className="grow wmax-w-4xl flex justify-between">
+              
+              <p>{event.title}</p>
+              <p>{event.dateShort}</p>
+
+
+            </div>
+              {index < 3 && <hr />}
+            </>
+          })}
+        </div>
+        <CustomButton
+        type="button"
+        >
+          <p>Bővebben</p>
+        </CustomButton>
+        
+      </Page> */}
 
       <Page custom="bg-orange h-screen ">
         <div className="flex w-96 max-w[800px] max-height-[448px] md:p-40 p-10 relative items-center  justify-center">
@@ -110,7 +132,6 @@ export const Home = () => {
           ></iframe>
         </div>
       </Page>
-      
     </div>
   );
 };

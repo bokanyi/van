@@ -1,97 +1,138 @@
-import { FC, useState } from "react";
+import { FC, useState, useRef } from "react";
 import { Artists } from "./Artists";
 import { CustomButton } from "./CustomButton";
+import { PlusOutlined, CloseOutlined } from "@ant-design/icons";
+// import useClickOutside from "../hooks/useClickOutside"
 
 type Details = {
-  title: string,
-  description: string,
-}
-
-type Props = {
   title: string;
+  description: string;
+};
+
+type Event = {
   date: string;
+  location: string;
+  dateShort: string;
+  title: string;
   img: string;
   description: string;
   details: Details[];
   images: string[];
   artists: string[];
-  index: number;
-  setOpen: () => void;
-  // slides: string[]
+  open: boolean;
 };
 
-export const Event: FC<Props> = ({ title, date, description, details, setOpen, images, artists, index }) => {
+
+type Props = {
+  event: Event;
+  index: number;
+  setOpen: (params: boolean) => void;
+  setTitle: (params: string) => void;
+  open: boolean;
+};
+
+export const Event: FC<Props> = ({
+  event,
+  setOpen,
+  // index,
+  open,
+  setTitle,
+}) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null)
+  // useClickOutside(ref, () => console.log("hello"))
+
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+    if (ref.current && !ref.current.contains(e?.target as Node)) {
+      setDetailsOpen(!detailsOpen) }
+      console.log(event.artists.length)
+  }
+
 
   return (
 
-        <div
-          className={`grow flex flex-col gap-10 md:p-10 p-4 hover:bg-blue-green bg-cover`}
-          style={{
-            color: "white",
-            // backgroundImage: `url('${img}')`,
-            height: `${detailsOpen ? "auto" : "auto"}`,
-            justifyContent: `${detailsOpen ? "" : "center"}`,
-          }}
-        >
-          <div className="md:flex justify-between items-center">
-            <h3 className="z-10">{title}</h3>
-            <div className="md:flex justify-between items-center">
-              <CustomButton
-              custom="grow text-white  text-left px-1 md:px-10"
-              type="button"
-                // onClick={() => {}}
-                // className=" grow text-white  text-left px-1 md:px-10"
-                onClick={() => setOpen()}
-              >
-                <p className="transition-all  duration-700
-                  hover:scale-110 ">
+    <div
+      className={`w-screen max-w-4xl flex flex-col gap-10 p-4 hover:bg-blue-green bg-cover`}
+      style={{
+        color: "white",
+        // backgroundImage: `url('${img}')`,
+        height: `${detailsOpen ? "auto" : "auto"}`,
+        justifyContent: `${detailsOpen ? "" : "center"}`,
+      }}
+      onClick={(e) =>  handleClick(e) }
+    >
+      <div className="md:flex justify-between items-center gap-4">
+        <img className="md:h-40 w-full md:w-auto mb-2" src={event.img} alt="" />
+        <div className="flex flex-col grow gap-1 mb-4 ">
+          <h3 className="z-10">{event.title}</h3>
+          <p className=" ">{event.date}</p>
+          <p className=" ">{event.location}</p>
+          <p className=" ">Helyszíni jegy: 2500 HUF</p>
+          <p className=" ">Elővételes jegy: 2000 HUF</p>
 
-                előregisztráció
-                </p>
-              </CustomButton>
-              <CustomButton
-              custom="grow text-white  hover:bg-blue-green text-left px-1"
-              type="button"
-                onClick={() => setDetailsOpen(!detailsOpen)}
-                // className=
-              >
-                <p className="transition-all  duration-700
-                  hover:scale-110 ">
-                  infó
-                  </p>
-              </CustomButton>
-              <p className=" ">{date}</p>
-            </div>
-          </div>
-          {detailsOpen && (
-            <>
-                <hr />
-              <div>
-                <p>{description}</p>
-              </div>
-            <div className="md:flex md:justify-between">
-             { details.map((detail, index) => {
-              return (
-              <div key={index} className="grow md:w-[50%]">
-              <p>{detail.title}</p>
-              <p >{detail.description}</p>
-              </div>
-              )
-             })}
-                        {/* <hr /> */}
-            </div>
-              { index===0 && <Artists
-               images={images}
-               artists={artists}
-              >
-               </Artists>}
-            </>
-          )}
         </div>
+   
+        <div className="gap-10 flex md:flex-col justify-between items-end ">
+       
+       <div className="hidden md:block">
 
-        // <hr className="border-t-2 border-blue-green" /> 
-    
+          {detailsOpen ? (
+            <CloseOutlined className="text-xl" />
+          ) : (
+            <PlusOutlined className="text-xl" />
+          )}
+       </div>
+            <div className="text-center">
 
+          <CustomButton
+            disabled={!event.open}
+            custom="text-white text-left px-1 md:px-10 border-2 disabled :opacity-75 border-b-4 rounded-md hover:bg-dark-blue"
+            type="button"
+            onClick={() => (setOpen(!open), setTitle(event.title))}
+          >
+            <p
+            ref={ref}
+              className="
+              transition-all  duration-700
+                  hover:scale-110"
+            >
+              regisztráció
+            </p>
+          </CustomButton>
+          <p>Hamarosan!</p>
+            </div>
+          <div className=" md:hidden">
+          {detailsOpen ? (
+            <CloseOutlined className="text-xl" />
+          ) : (
+            <PlusOutlined className="text-xl" />
+          )}
+       </div>
+
+        </div>
+      </div>
+      {detailsOpen && (
+        <div className="">
+          <hr />
+            <p className="my-4">{event.description}</p>
+          <div className="flex flex-col md:justify-between gap-10">
+            {event.details.map((detail, index) => {
+              return (
+                <div key={index} className="">
+                  <p className="pb-10">{detail.title}</p>
+                  <p>{detail.description}</p>
+                </div>
+              );
+            })}
+          </div>
+          {event.artists.length > 1 && <Artists images={event.images} artists={event.artists}></Artists>}
+        </div>
+      )}
+    </div>
+     
+   
+
+    // <hr className="border-t-2 border-blue-green" />
   );
 };

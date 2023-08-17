@@ -1,12 +1,12 @@
 import { Page } from '../components/Page'
-import Form from "../components/Form";
+import Captcha from "../components/Captcha";
 
 export const Test = () => {
     return (
       <div>
       <Page custom={"bg-orange min-h-screen py-40"}>
         hello
-        <Form></Form>
+        <Captcha></Captcha>
       </Page>
     </div>
     )

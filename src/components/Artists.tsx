@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react'
 
 type Props = {
     custom?: string;
-    children: ReactNode;
+    children?: ReactNode;
     images: string[];
     artists: string[]
   }
