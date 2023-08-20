@@ -12,13 +12,19 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = ({children, ty
   const ref = useRef<HTMLButtonElement>(null);
 
   return (
+    <div
+    className='relative h-20'
+    
+    >
+
     <button ref={ref}
     {...rest}
     disabled={disabled}
     // style={{background: bgColor}} ${color}
     type={type}
     className={`
-    transition-all  duration-700
+    flex border-2 border-b-4 rounded-md hover:translate-y-[-0.2rem] hover:border-b-8 absolute right-0 bottom-0
+    transition-all  duration-700  
     px-4 py-2 
     ${custom}  
     `} 
@@ -26,5 +32,6 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = ({children, ty
         {/* {text} */}
       {children}
     </button>
+    </div>
   );
 }

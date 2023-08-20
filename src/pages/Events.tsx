@@ -19,6 +19,10 @@ export const Events = () => {
 
   return (
     <div className="min-h-screen w-screen relative md:pt-40 pt-20 flex flex-col wrap bg-dark-blue items-center ">
+      <div className="md:w-[56rem] text-white">
+
+       <h1 className="">KONCERTEK</h1>
+      </div>
       {contextHolder}
       {open && (
 
@@ -33,6 +37,7 @@ export const Events = () => {
       {content.events.map((event, index) => {
         return (
           <div className="max-w-4xl" key={index}>
+           
             <Event
               event={event}
               setOpen={setOpen}

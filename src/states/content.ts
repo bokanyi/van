@@ -30,6 +30,12 @@ type Content = {
   quotation: string[];
   motto: string[];
   events: Event[];
+  contact:{
+    text: string;
+    email: string;
+    facebook: string;
+    info: string;
+  }
 };
 
 type Faq = {
@@ -76,7 +82,7 @@ const hungarian: Content = {
         {
           title: "Classic:",
           description:
-            "Hartmann Domonkos (cselló), Kondorosi Karolina (hegedű), Sebestyén Patrik (trombita), Mitró Apolka",
+            "Alföldi Nelli (hegedű), Csabay Domonkos (zongora), Hartmann Domonkos (cselló), Kondorosi Karolina (hegedű), Sebestyén Patrik (trombita), Mitró Apolka (oboa)",
         },
         {
           title: "Jazz:",
@@ -85,6 +91,8 @@ const hungarian: Content = {
         },
       ],
       images: [
+        "01/alfoldi.jpg",
+        "01/csabay.jpg",
         "01/hartmann.jpg",
         "01/kondorosi.jpg",
         "01/sebestyen.jpg",
@@ -95,6 +103,8 @@ const hungarian: Content = {
         "01/roman.jpg",
       ],
       artists: [
+        "Alföldi Nelli",
+        "Csabay Domonkos",
         "Hartmann Domonkos",
         "Kondorosi Karolina",
         "Sebestyén Patrik",
@@ -171,6 +181,12 @@ Jelenleg a grazi Zeneakadémia tanára.`,
       open: false,
     },
   ],
+  contact:{
+    text:"Maradt még kérdésed?\nAz alábbi módokon érhetsz el minket:",
+    email: "koncertvan@gmail.com",
+    facebook: "https://www.facebook.com/veszpremiekanagyvilagban/",
+    info: "A Veszprémiek a Nagyvilágban koncertsorozat Hordós Johanna és a veszprémi Csermák Antal Zeneiskola közös projectje. A koncertsorozat a Veszprém-Balaton 2023 Európa Kulturális Fővárosa program támogatásával jön létre."
+  }
 };
 
 const faqs: Faq[] = [
@@ -197,5 +213,11 @@ const faqs: Faq[] = [
   },
 ];
 
+
 export const $content = new BehaviorSubject<Content>(hungarian);
 export const $faqs = new BehaviorSubject<Faq[]>(faqs);
+export const $cookieConfirm = new BehaviorSubject<boolean>(false);
+
+export const confirm = () => {
+  $cookieConfirm.next(true)
+}

@@ -1,4 +1,5 @@
 import { Carousel } from "../components/Carousel";
+// import { useEffect } from "react";
 import { Page } from "../components/Page";
 // import { Card } from "../components/Card";
 import useGlobal from "../hooks/useGlobal";
@@ -7,15 +8,19 @@ import supabase from "../config/supabaseClient";
 import { CustomButton } from "../components/CustomButton";
 import {CaretRightOutlined} from "@ant-design/icons";
 import { navigate } from "../states/routes";
+import { CookiePopup } from "../components/CookiePopup";
+import { $cookieConfirm } from "../states/content";
 
 // import Form from "../components/Form";
 
 export const Home = () => {
   const content = useGlobal($content);
+  const cookieConfirm = useGlobal($cookieConfirm);
 
   console.log(supabase);
   return (
     <div>
+      { !cookieConfirm && <CookiePopup/>}
       {/* <Page custom={" w-screen bg-orange py-40"}> */}
       <div className="w-screen relative">
       <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
@@ -48,11 +53,11 @@ export const Home = () => {
       
       <Page custom="bg-orange h-screen">
         <div className="max-w-4xl md:p-0 p-10 italic">
-        <h3 className="bg-light-rose inline md:hover:text-white underline ">Veszprémi kötődésű zenészek</h3><h3 className="inline" >, akik pályafutásuk során messzire sodródtak a nagyvilágban, <u>most hazatérnek</u>, és négy alkalmas élménykoncertre invitálnak az őszi hónapokban</h3>
+        <h3 className="bg-light-rose inline underline ">Veszprémi kötődésű zenészek</h3><h3 className="inline" >, akik pályafutásuk során messzire sodródtak a nagyvilágban, <u>most hazatérnek</u>, és négy alkalmas élménykoncertre invitálnak az őszi hónapokban</h3>
         </div>
       </Page>
 
-      <Page custom="bg-light-rose md:h-screen">
+      <Page custom="bg-light-rose md:h-screen min-h-[800px]">
         <div className="max-w-4xl m-auto p-10 md:p-0 flex md:flex-row flex-col gap-10">
           <div className="grow md:w-[50%] border:none; bg-contain">
             <img src="/hordos_johanna.jpg" alt="" />
@@ -85,32 +90,23 @@ export const Home = () => {
             </Carousel>
               <h1 className=" italic text-end">"</h1>
             </div>
-            {/* <p className="md:text-sm/[2em] ">{content.story[2]}</p> */}
             <h3 className="italic text-end">Hordós Johanna</h3>
-            <div
-        className="self-end h-20 relative "
-        >
+  
 
             <CustomButton
         type="button"
-        custom="self-end bg-orange flex border-2 border-b-4 rounded-md hover:bg-light-rose hover:translate-y-[-0.2rem] hover:border-b-8 absolute right-0 bottom-0"
+        custom="self-end bg-orange hover:bg-light-rose "
         onClick={() => {
           navigate("/about");
         }}        >
           <p >Rólunk</p>
           <CaretRightOutlined className="text-xl"/>
         </CustomButton>
-        </div>
-            {/* <p >{content.story[3]}</p> */}
           </div>
         </div>
       </Page>
 
-      {/* <Page custom=" bg-orange px-10 md:p-40  m-auto items-center">
-        <p>{content.story[2]}</p>
-      </Page> */}
-
-      <Page custom="bg-orange md:h-screen py-10 md:p-0 flex-col m-auto items-center">
+      <Page custom="bg-orange md:h-screen min-h-[800px] py-10 md:p-0 flex-col m-auto items-center">
         <div className="max-w-4xl md:h-full flex flex-col justify-between md:py-40 relative">
 
           <h1 className="self-start">KONCERTEK</h1>
@@ -129,13 +125,11 @@ export const Home = () => {
             </>
           })}
         </div>
-        <div
-        className="self-end h-20 relative "
-        >
+      
 
         <CustomButton
         type="button"
-        custom="self-end bg-light-rose flex border-2 border-b-4 rounded-md hover:bg-orange hover:translate-y-[-0.2rem] hover:border-b-8 absolute bottom-0 right-0"
+        custom="self-end bg-light-rose hover:bg-orange"
         onClick={() => {
           navigate("/events");
         }}        >
@@ -144,7 +138,6 @@ export const Home = () => {
         </CustomButton>
         </div>
         
-        </div>
       </Page>
 
       <Page custom="bg-orange md:h-[500px] min-h-[300px] ">
@@ -161,6 +154,7 @@ export const Home = () => {
           ></iframe>
         </div>
       </Page>
+      
     </div>
   );
 };
