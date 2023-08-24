@@ -72,8 +72,8 @@ const hungarian: Content = {
   ],
   events: [
     {
-      date: "2023. szeptember 30. szombat",
-      location: "Veszprém, Megyeháza Szt. István terem",
+      date: "2023. szeptember 30. 18:30",
+      location: "Megyeháza Szt. István terem",
       dateShort: "23/09/30",
       title: "VAN Classic + Jazz",
       img: "/pexels_artist01.jpg",
@@ -117,13 +117,17 @@ const hungarian: Content = {
       open: false,
     },
     {
-      date: "2023. október 27. péntek",
-      location: "",
+      date: "2023. október 27. 18:00",
+      location: "Hangvilla,\nMedelssohn Kamarazenekar Próbaterme",
       dateShort: "23/10/27",
       title: "Bartók Előadás Farkas Zoltánnal",
       img: "/pexels_artist03.jpg",
       description: "",
-      details: [
+      details: [{
+        title:"",
+        description:"Magyarként sokat hallottál Bartók Béláról, de sosem értetted meg őt igazán? Tudtad, hogy Bartók több ezer népdalt gyűjtött, és abból több, mint 300-at fel is használt saját műveiben? Gyere el zenei kommentárokkal kiegészített zongorajáték estünkre, ahol Farkas Zoltán ( zenetudós, zenekritikus) narrációjával közelebb hozzuk hozzád Bartók Szabadban és Improvizációk magyar parasztdalokra c. zongoraciklusait. "
+      },
+
         {
           title: "Farkas Zoltán (1964), zenetörténész, zenekritikus",
           description:
@@ -157,25 +161,38 @@ Jelenleg a grazi Zeneakadémia tanára.`,
       open: false,
     },
     {
-      date: "2023. október 28. szombat",
-      location: "",
+      date: "2023. október 28. 18:00",
+      location: "Csermák Antal Zeneiskola",
       dateShort: "23/10/28",
       title: "VAN Classic + Népzene",
       img: "/pexels_artist02.jpg",
       description: "",
-      details: [{ title: "", description: "" }],
+      details: [{ title: "", description: "Veszprémi kötődésű fiatal zenészek harmadik koncertjén a magyar zene kerül fókuszba. Az est első felében magyar zeneszerzők művei csendülnek fel vonós hangszereken. A koncert második felében pedig a magyar népi rigmusoké lesz a főszerep, melyet a Pengő népi zenekar autentikus előadása biztosít majd. Ha szeretnéd zenei oldalról is tágítani a magyar-tudásod, akkor itt a helyed! " },
+      {
+        title:"Classic:",
+        description:"Sándor József, Mézes Mátyás, Alföldi Nelli, Hartmann Domonkos"
+      },
+      {
+        title:"Népzene:",
+       description:"A pengő zenekar, céljuk a Kárpát–medence magyar hangszeres népzenéjének hiteles előadásmódja és terjesztése, néptáncegyüttesek és népdalkörök műsorának zenei kísérete, valamint saját koncertműsoruk előadása, fontos számukra a táncházi muzsikálás."
+      },
+      {
+        title:"A Pengő zenekar jelenlegi tagjai:",
+       description:"Gábor Klára (szólóének), Ág Zoltán (cimbalom, nagybőgő, kisbőgő, ének), Takács Péter (nagybőgő, ének), Czufoka Gábor (kontra, ének), Mézes Zsuzsanna (kontra, ének), Mézes Mátyás (hegedű, ének), Mézes Attila (furulya, klarinét), Mézes Árpád (hegedű, ének) – zenekarvezető"
+      },
+  ],
       images: [""],
       artists: [""],
       open: false,
     },
     {
-      date: "2023. november 25. szombat",
-      location: "",
+      date: "2023. november 25. 18:30",
+      location: "Veszprém",
       dateShort: "23/11/25",
       title: "VAN Classic + Világzene",
       img: "/pexels-cottonbro-studio-7095504.jpg",
       description: "",
-      details: [{ title: "", description: "" }],
+      details: [{ title: "Hamarosan!", description: "" }],
       images: [""],
       artists: [""],
       open: false,
