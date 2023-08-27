@@ -8,9 +8,9 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between w-screen md:max-w-4xl fixed top-0 md:top-2 items-center md:px-0 px-4 py-2 md:py-0 z-30 rounded-md text-white ">
+      <div className="flex justify-between w-screen md:max-w-4xl fixed top-0 md:top-2 items-center md:px-0 px-4 py-2 md:py-0 z-30 rounded-md  text-white ">
         <button
-          className="w-24 md:w-36 px-4 md:px-6 bg-white/30 "
+          className="w-24 md:w-36 rounded-md md:hover:w-40 transition-all duration-700 px-4 md:px-6 bg-white/30 "
           onClick={() => {
             navigate("/")
           }}
@@ -19,13 +19,13 @@ export const Navbar = () => {
         </button>
 
         <div
-        className="flex flex-col bg-white text-black border-2 rounded-md absolute top-4 right-4 md:right-0 
+        className="flex flex-col bg-white text-black border-2 rounded-md absolute top-4 right-4 md:right-0  
         transition-all duration-700
-        px-4 py-2 "
+        px-4 py-2 group " 
         >
-          <div className="self-end relative p-4 py-5">
+          <div className="self-end relative md:group-hover:p-5 md:group-hover:py-6 transition-all duration-700 p-4 py-5">
 
-        <MenuOutlined className="absolute text-3xl top-0 right-0"
+        <MenuOutlined className="absolute text-3xl md:group-hover:text-4xl transition-all duration-700 top-0 right-0"
         onClick={() => {
           setMenuOpen(!menuOpen);
         }}
@@ -59,6 +59,7 @@ export const Navbar = () => {
           </button>
           <hr />
           <button
+          className="text-end"
            onClick={() => {
             navigate("/contact"),
             setMenuOpen(!menuOpen)
@@ -69,6 +70,7 @@ export const Navbar = () => {
           </button>
           <hr />
           <button
+          className="text-end"
            onClick={() => {
             navigate("/"),
             setMenuOpen(!menuOpen)
