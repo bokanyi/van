@@ -202,7 +202,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
     text:"Maradt még kérdésed?\n\nAz alábbi módokon érhetsz el minket:",
     email: "koncertvan@gmail.com",
     facebook: "https://www.facebook.com/veszpremiekanagyvilagban/",
-    info: `A Veszprémiek a Nagyvilágban koncertsorozat Hordós Johanna és a veszprémi Csermák Antal Zeneiskola közös projectje.\n\nA koncertsorozat a Veszprém-Balaton 2023 Európa Kulturális Fővárosa program támogatásával jön létre.`
+    info: `A Veszprémiek a Nagyvilágban koncertsorozat Hordós Johanna és a veszprémi Csermák Antal Zeneiskola közös projektje.\n\nA koncertsorozat a Veszprém-Balaton 2023 Európa Kulturális Fővárosa program támogatásával jött létre.`
   }
 };
 
