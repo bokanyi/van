@@ -10,6 +10,7 @@ export const Contact = () => {
     // <div>
     <Page custom={"min-h-screen py-40 bg-light-rose flex-col "}>
       <div className="max-w-4xl m-auto p-10 md:p-0 flex flex-col gap-10">
+      <h1 className="">KAPCSOLAT</h1>
         <p>{content.contact.text}</p>
         <div className="flex gap-4 items-end">
           <a

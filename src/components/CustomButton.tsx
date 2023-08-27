@@ -1,7 +1,6 @@
 import {useRef} from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    // text: string;
     children?: React.ReactNode;
     type: "submit" | "button" ;
     custom?: string;
@@ -20,7 +19,6 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = ({children, ty
     <button ref={ref}
     {...rest}
     disabled={disabled}
-    // style={{background: bgColor}} ${color}
     type={type}
     className={`
     flex border-2 border-b-4 rounded-md hover:translate-y-[-0.2rem] hover:border-b-8 absolute right-0 bottom-0
@@ -29,7 +27,6 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = ({children, ty
     ${custom}  
     `} 
     >
-        {/* {text} */}
       {children}
     </button>
     </div>

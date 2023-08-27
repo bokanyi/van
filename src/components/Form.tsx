@@ -11,7 +11,7 @@ type NotificationApi = {
   type Props = {
     setOpen: (params: boolean) => void;
     title: string;
-    api: NotificationApi; // Use the defined type here
+    api: NotificationApi; 
   };
 
 

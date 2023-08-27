@@ -1,17 +1,10 @@
 import { navigate } from "../states/routes";
 import { useState } from "react";
-// import { CustomButton } from "./CustomButton";
 import { MenuOutlined } from "@ant-design/icons";
 
 export const Navbar = () => {
-  // const [onInfo, setOnInfo] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false)
-
-  // const navigateToInfo = () => {
-  //   if (!onInfo) navigate("/info"), setOnInfo(true);
-  //   if (onInfo) history.back(), setOnInfo(false);
-  // };
 
   return (
     <>
@@ -20,31 +13,10 @@ export const Navbar = () => {
           className="w-24 md:w-36 px-4 md:px-6 bg-white/30 "
           onClick={() => {
             navigate("/")
-            // setOnInfo(false);
           }}
         >
           <img src="/van_logo.png" alt="" />
         </button>
-
-        {/* <CustomButton
-        custom="md:mt-8"
-          type="button"
-          onClick={() => {
-            navigate("/events"), setOnInfo(false);
-          }}
-        >
-          <p>KONCERTEK</p>
-        </CustomButton> */}
-
-        {/* <CustomButton
-          custom="border-2 rounded-md bg-orange hover:bg-light-rose"
-          type="button"
-          onClick={() => {
-            navigateToInfo();
-          }}
-        >
-          <MenuOutlined className="text-3xl" />
-        </CustomButton> */}
 
         <div
         className="flex flex-col bg-white text-black border-2 rounded-md absolute top-4 right-4 md:right-0 
@@ -95,63 +67,22 @@ export const Navbar = () => {
         >
           <p>KAPCSOLAT</p>
           </button>
+          <hr />
+          <button
+           onClick={() => {
+            navigate("/"),
+            setMenuOpen(!menuOpen)
+            ;
+          }}
+        >
+          <p>FŐOLDAL</p>
+          </button>
           </div>
           
            }
         
 
         </div>
-
-        {/* <CustomButton
-          custom="bg-orange hover:bg-light-rose"
-          type="button"
-          onClick={() => {
-            setMenuOpen(!menuOpen);
-          }}
-        >
-          <MenuOutlined className="text-3xl" />
-
-        </CustomButton> */}
-
-
-
-        {/* {menuOpen && <div
-        className="absolute right-0 top-[80px] w-44" 
-        >
-          <CustomButton
-          custom="border-2 rounded-md bg-orange hover:bg-light-rose"
-          type="button"
-          onClick={() => {
-            navigate("/events"),
-            setMenuOpen(!menuOpen)
-            ;
-          }}
-        >
-          <p>KONCERTEK</p>
-        </CustomButton>
-          <CustomButton
-          custom="border-2 rounded-md bg-orange hover:bg-light-rose"
-          type="button"
-          onClick={() => {
-            navigate("/about"),
-            setMenuOpen(!menuOpen);
-          }}
-        >
-          <p>RÓLUNK</p>
-        </CustomButton>
-          <CustomButton
-          custom="border-2 rounded-md bg-orange hover:bg-light-rose"
-          type="button"
-          onClick={() => {
-            navigate("/contact"),
-            setMenuOpen(!menuOpen);
-          }}
-        >
-          <p>KAPCSOLAT</p>
-        </CustomButton>
-
-        </div> } */}
-
 
       </div>
     </>

@@ -1,7 +1,5 @@
 import { Carousel } from "../components/Carousel";
-// import { useEffect } from "react";
 import { Page } from "../components/Page";
-// import { Card } from "../components/Card";
 import useGlobal from "../hooks/useGlobal";
 import { $content } from "../states/content";
 import supabase from "../config/supabaseClient";
@@ -11,8 +9,6 @@ import { navigate } from "../states/routes";
 import { CookiePopup } from "../components/CookiePopup";
 import { $cookieConfirm } from "../states/content";
 
-// import Form from "../components/Form";
-
 export const Home = () => {
   const content = useGlobal($content);
   const cookieConfirm = useGlobal($cookieConfirm);
@@ -21,7 +17,6 @@ export const Home = () => {
   return (
     <div>
       { !cookieConfirm && <CookiePopup/>}
-      {/* <Page custom={" w-screen bg-orange py-40"}> */}
       <div className="w-screen relative">
       <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
       <a href="http://www.veszprembalaton2023.hu " target='blank'>
@@ -40,7 +35,7 @@ export const Home = () => {
                   backgroundImage: `url('${event.img}')`,
                 }}
               >
-                {/* <img className="absolute h-screen z-0" src={`${event.img}`} alt="" /> */}
+              
                 <div className="md:w-[520px] px-6 relative text-center md:text-right m-auto z-10">
                   <h3 className=" inline ">{event.title}</h3>
                   <p className=" ">{event.date}</p>

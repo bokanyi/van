@@ -93,8 +93,6 @@ export const Event: FC<Props> = ({
             <p>Hamarosan!</p>
           </div>
 
-         
-
         </div>
       </div>
       {detailsOpen && (
@@ -118,6 +116,5 @@ export const Event: FC<Props> = ({
       )}
     </div>
 
-    // <hr className="border-t-2 border-blue-green" />
   );
 };
