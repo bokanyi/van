@@ -9,6 +9,7 @@ export const About = () => {
   return (
     <div>
       <Page custom="bg-orange pt-20 md:pt-40 flex-col">
+       
       <div className="md:w-[56rem]">
         <h1 className="">RÓLUNK</h1>
       </div>

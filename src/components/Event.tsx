@@ -57,7 +57,7 @@ export const Event: FC<Props> = ({
       onClick={(e) => handleClick(e)}
     >
       <div className="md:flex justify-between items-center gap-4">
-        <img className="md:h-40 w-full md:w-auto mb-2" src={event.img} alt="" />
+        <img className="md:h-40 w-full rounded-md md:w-auto mb-2" src={event.img} alt="" />
         <div className="flex flex-col grow gap-1 mb-4 ">
           <h3 className="z-10">{event.title}</h3>
           <p className=" ">{event.date}</p>

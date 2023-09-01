@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Carousel } from "../components/Carousel";
 import { Page } from "../components/Page";
 import useGlobal from "../hooks/useGlobal";
@@ -13,10 +14,35 @@ export const Home = () => {
   const content = useGlobal($content);
   const cookieConfirm = useGlobal($cookieConfirm);
 
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(false);
+    }, 5000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   console.log(supabase);
   return (
     <div>
       { !cookieConfirm && <CookiePopup/>}
+      { !cookieConfirm &&
+      <div
+      className={`fixed h-screen w-screen bg-orange z-20 flex flex-col justify-center items-center  
+      transition-all duration-300
+       ${!visible && '-translate-y-[100vh] '} 
+      font-prata italic `}
+      >
+        <div className='relative flex flex-col gap-6 p-4'>
+        <h1 className='' >Veszprémiek a nagyvilágban</h1>
+        <h2 className='absolute top-36 right-4  not-italic'>Koncertsorozat</h2>
+        <p className='absolute top-52 right-4 not-italic '>2023 ősz</p>
+        </div>
+
+      </div> }
+
       <div className="w-screen relative">
       <div  className='absolute w-40 h-40 bottom-[10%] right-[20%] z-10'>
       <a href="http://www.veszprembalaton2023.hu " target='blank'>

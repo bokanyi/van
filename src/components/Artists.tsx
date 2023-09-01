@@ -15,7 +15,7 @@ export const Artists: FC<Props> = ({ custom, images, artists}) => {
                 <div 
                 key={index}
                 className="flex flex-col justify-center gap-4"  >
-                <img className="h-80 max-w-xs object-cover" src={image} alt="" />
+                <img className="h-80 max-w-xs object-cover rounded-md" src={image} alt="" />
                 <p>{artists[index]}</p>
                 </div>
             )

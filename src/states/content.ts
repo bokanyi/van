@@ -82,7 +82,7 @@ const hungarian: Content = {
         {
           title: "Classic:",
           description:
-            "Alföldi Nelli (hegedű), Csabay Domonkos (zongora), Hartmann Domonkos (cselló), Kondorosi Karolina (hegedű), Sebestyén Patrik (trombita), Mitró Apolka (oboa)",
+            "Alföldi Nelli (hegedű), Csabay Domonkos (zongora), Hartmann Domonkos (cselló), Hordós Johanna (zongora), Kondorosi Karolina (hegedű), Sebestyén Patrik (trombita), Mitró Apolka (oboa)",
         },
         {
           title: "Jazz:",

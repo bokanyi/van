@@ -13,7 +13,7 @@ export const CookiePopup = () => {
             
               <p>
                 
-              Ez az oldal sütiekt használ
+              Ez az oldal sütiket használ.
               </p>
               <button
               className='bg-orange/40 rounded-md px-4'
