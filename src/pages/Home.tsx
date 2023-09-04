@@ -104,14 +104,14 @@ export const Home = () => {
               {content.quotation.map((sections) => {
                 return (
                   <div>
-                    <p>{sections}</p>
+                    <p className='italic'>{sections}</p>
                   </div>
                 )
               })}
             </Carousel>
               <h1 className=" italic text-end">"</h1>
             </div>
-            <h3 className="italic text-end">Hordós Johanna</h3>
+            <h3 className=" text-end">Hordós Johanna</h3>
   
 
             <CustomButton
@@ -127,15 +127,15 @@ export const Home = () => {
         </div>
       </Page>
 
-      <Page custom="bg-orange md:h-screen min-h-[800px] py-10 md:p-0 flex-col m-auto items-center">
-        <div className="max-w-4xl md:h-full flex flex-col justify-between md:py-40 relative">
+      <Page custom="bg-orange md:h-screen min-h-[800px] p-10 py-10 md:p-0 flex-col m-auto items-center">
+        <div className="max-w-4xl md:h-full flex flex-col justify-between md:py-40 relative gap-10">
 
           <h1 className="self-start">KONCERTEK</h1>
         <div className="flex flex-col md:gap-4 gap-4">
           {content.events.map((event, index)=> {
             return <>
             
-            <div className="grow md:w-[56rem] flex justify-between ">
+            <div className="grow md:w-[56rem] flex justify-between gap-2 ">
               
               <p>{event.title}</p>
               <p>{event.dateShort}</p>

@@ -19,6 +19,7 @@ type Event = {
   images: string[];
   artists: string[];
   open: boolean;
+  state: string;
 };
 
 type Props = {
@@ -90,7 +91,7 @@ export const Event: FC<Props> = ({
                 regisztráció
               </p>
             </CustomButton>
-            <p>Hamarosan!</p>
+            <p>{event.state}</p>
           </div>
 
         </div>

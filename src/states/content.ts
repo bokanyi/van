@@ -16,6 +16,7 @@ type Event = {
   images: string[];
   artists: string[];
   open: boolean;
+  state: string;
 };
 
 type Content = {
@@ -114,8 +115,9 @@ const hungarian: Content = {
         "Tasner Levente",
         "Román Iván",
       ],
-      open: false,
-    },
+      open: true,
+      state: ""   
+},
     {
       date: "2023. október 27. 18:00",
       location: "Hangvilla,\nMedelssohn Kamarazenekar Próbaterme",
@@ -158,7 +160,8 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "02/fuzessery.jpg",
       ],
       artists: ["Farkas Zoltán","Hordós Johanna", "Füzesséry Zoltán"],
-      open: false,
+      open: true,
+      state: ""
     },
     {
       date: "2023. október 28. 18:00",
@@ -183,7 +186,8 @@ Jelenleg a grazi Zeneakadémia tanára.`,
   ],
       images: [""],
       artists: [""],
-      open: false,
+      open: true,
+      state: ""
     },
     {
       date: "2023. november 25. 18:30",
@@ -195,7 +199,8 @@ Jelenleg a grazi Zeneakadémia tanára.`,
       details: [{ title: "Hamarosan!", description: "" }],
       images: [""],
       artists: [""],
-      open: false,
+      open: true,
+      state: ""
     },
   ],
   contact:{

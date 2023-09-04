@@ -37,14 +37,14 @@ export const About = () => {
                 {content.quotation.map((sections) => {
                   return (
                     <div>
-                      <p>{sections}</p>
+                      <p className="italic">{sections}</p>
                     </div>
                   );
                 })}
               </Carousel>
               <h1 className=" italic text-end">"</h1>
             </div>
-            <h3 className="italic text-end">Hordós Johanna</h3>
+            <h3 className="text-end">Hordós Johanna</h3>
           </div>
         </div>
       </Page>
