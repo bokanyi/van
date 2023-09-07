@@ -74,7 +74,7 @@ const hungarian: Content = {
   events: [
     {
       date: "2023. szeptember 30. 18:30",
-      location: "Megyeháza Szt. István terem",
+      location: "Deák Ferenc utcai Rendezvényközpont",
       dateShort: "23/09/30",
       title: "VAN Classic + Jazz",
       img: "/pexels_artist01.jpg",
@@ -95,6 +95,7 @@ const hungarian: Content = {
         "01/alfoldi.jpg",
         "01/csabay.jpg",
         "01/hartmann.jpg",
+        "hordos_johanna.jpg",
         "01/kondorosi.jpg",
         "01/sebestyen.jpg",
         "01/mitro.jpeg",
@@ -107,6 +108,7 @@ const hungarian: Content = {
         "Alföldi Nelli",
         "Csabay Domonkos",
         "Hartmann Domonkos",
+        "Hordós Johanna",
         "Kondorosi Karolina",
         "Sebestyén Patrik",
         "Mitró Apolka",
@@ -165,7 +167,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
     },
     {
       date: "2023. október 28. 18:00",
-      location: "Csermák Antal Zeneiskola",
+      location: "Deák Ferenc utcai Rendezvényközpont",
       dateShort: "23/10/28",
       title: "VAN Classic + Népzene",
       img: "/pexels_artist02.jpg",
@@ -184,21 +186,59 @@ Jelenleg a grazi Zeneakadémia tanára.`,
        description:"Gábor Klára (szólóének), Ág Zoltán (cimbalom, nagybőgő, kisbőgő, ének), Takács Péter (nagybőgő, ének), Czufoka Gábor (kontra, ének), Mézes Zsuzsanna (kontra, ének), Mézes Mátyás (hegedű, ének), Mézes Attila (furulya, klarinét), Mézes Árpád (hegedű, ének) – zenekarvezető"
       },
   ],
-      images: [""],
-      artists: [""],
+  images: [
+        "03/pengo.jpg",
+        "03/sandor.jpg",
+      "03/mezes.jpg",
+      "01/alfoldi.jpg",
+      "01/hartmann.jpg",
+    
+    ],
+      artists: [
+        "A Pengő zenekar",
+        "Sándor József",
+        "Mézes Mátyás",
+        "Alföldi Nelli",
+        "Hartmann Domonkos",
+    
+    ],
       open: false,
       state: "Hamarosan!"
     },
     {
       date: "2023. november 25. 18:30",
-      location: "Veszprém",
+      location: "Deák Ferenc utcai Rendezvényközpont",
       dateShort: "23/11/25",
       title: "VAN Classic + Világzene",
       img: "/pexels-cottonbro-studio-7095504.jpg",
       description: "",
-      details: [{ title: "Hamarosan!", description: "" }],
-      images: [""],
-      artists: [""],
+      details: [
+        { 
+        title:"Classic:",
+        description: "Hordós Johanna (zongora), Lenner Barnabás (klarinét), Kondorosi Karolina (hegedű)" },
+        { 
+          title:"Világzene: Nemes Gábor - gitár",
+        description: "A koncert középpontjában a gitár sokoldalúságának megmutatása áll. A klasszikus gitár többszólamú technikája olykor kiegészül a modern akusztikus és fingerstyle-gitározás elemeivel. A kompozíciók sokszor népzenei gyökerekből, tradicionális motívumokból építkeznek. A műsorban helyet kap néhány klasszikus értelemben vett népdalfeldolgozás is." },
+          { 
+          title:"Világzene: Setup ütős trió",
+          description: "A Setup együttes koncertje mindannyiunk ütőhangszerek iránti ösztönös kíváncsiságát hívja elő. Az együttes különösen nagy figyelmet fordít arra, hogy az ütőhangszerek sokszínűségét megismertesse hallgatóival, így bemutatva a világ különböző népeinek zenéit, a saját feldolgozásukban. Magyar- és balkáni népzenével, különböző tájak sajátos stílusú zenéjével, tradicionális afrikai dobolással, kifejezetten ütőhangszerekre írt művekkel és sok-sok izgalmas hangszerrel várjuk kedves közönségünket." },
+      
+      ],
+      images: [
+        "04/nemes.jpg",
+        "04/setup.jpg",
+        "hordos_johanna.jpg",
+      "04/lenner.jpg",
+      "01/kondorosi.jpg",
+    
+    ],
+      artists: [
+        "Nemes Gábor",
+        "A Setup ütős trió",
+        "Hordós Johanna",
+      "Lenner Barnabás", 
+      "Kondorosi Karolina",
+    ],
       open: false,
       state: "Hamarosan!"
     },

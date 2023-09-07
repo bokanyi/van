@@ -2,7 +2,7 @@ import { Route } from './components/Route'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
-import {Info} from './pages/Info'
+import {Location} from './pages/Location'
 import {Navbar} from './components/Navbar'
 import { Footer } from './components/Footer'
 import { Events } from './pages/Events'
@@ -16,7 +16,7 @@ const App = () => {
      <Route path="/about" > <About/></Route>
      {/* <Route path="/events" > <Events/></Route> */}
      <Route path="/contact" > <Contact/></Route>
-     <Route path="/info" > <Info/></Route>
+     <Route path="/location" > <Location/></Route>
      <Route path="/events" > <Events/></Route>
      <Footer/>
     </div>

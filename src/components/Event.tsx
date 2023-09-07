@@ -49,7 +49,7 @@ export const Event: FC<Props> = ({
 
   return (
     <div
-      className={`w-screen max-w-4xl flex flex-col gap-10 p-4 hover:bg-blue-green bg-cover`}
+      className={`w-screen max-w-4xl flex p-10 flex-col gap-10 lg:px-4 hover:bg-blue-green bg-cover`}
       style={{
         color: "white",
           height: `${detailsOpen ? "auto" : "auto"}`,
@@ -76,10 +76,10 @@ export const Event: FC<Props> = ({
               <CaretDownOutlined className="text-xl" />
             )}
           </div>
-          <div className="">
+          <div className="w-44 text-end">
             <CustomButton
               disabled={!event.open}
-              custom="text-white text-left px-1 md:px-10 hover:bg-dark-blue"
+              custom="text-white text-left px-2 md:px-6 hover:bg-dark-blue"
               type="button"
               onClick={() => (setOpen(!open), setTitle(event.title))}
             >
