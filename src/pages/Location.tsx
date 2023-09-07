@@ -1,10 +1,6 @@
 import { Page } from "../components/Page";
-import useGlobal from "../hooks/useGlobal";
-import { $content } from "../states/content";
-import { FacebookFilled, MailFilled } from "@ant-design/icons";
 
 export const Location = () => {
-  const content = useGlobal($content);
 
   return (
     // <div>
