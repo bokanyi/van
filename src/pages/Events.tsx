@@ -34,7 +34,7 @@ export const Events = () => {
           <p>Bérlet az összes koncertre: 7500 HUF</p>
           <br />
           <p>
-            Az összes jegy a helyszínen váltható. Felhívjuk figyelmét, hogy csak
+            Az összes jegy és bérlet a helyszínen váltható. Felhívjuk figyelmét, hogy csak
             készpénzzel lehet fizetni.
           </p>
         </div>
