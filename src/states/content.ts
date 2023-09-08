@@ -117,8 +117,8 @@ const hungarian: Content = {
         "Tasner Levente",
         "Román Iván",
       ],
-      open: false,
-      state: "Hamarosan!"   
+      open: true,
+      state: ""   
 },
     {
       date: "2023. október 27. 18:00",
@@ -162,8 +162,8 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "02/fuzessery.jpg",
       ],
       artists: ["Farkas Zoltán","Hordós Johanna", "Füzesséry Zoltán"],
-      open: false,
-      state: "Hamarosan!"
+      open: true,
+      state: ""
     },
     {
       date: "2023. október 28. 18:00",
@@ -202,8 +202,8 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "Hartmann Domonkos",
     
     ],
-      open: false,
-      state: "Hamarosan!"
+      open: true,
+      state: ""
     },
     {
       date: "2023. november 25. 18:30",
@@ -239,8 +239,8 @@ Jelenleg a grazi Zeneakadémia tanára.`,
       "Lenner Barnabás", 
       "Kondorosi Karolina",
     ],
-      open: false,
-      state: "Hamarosan!"
+      open: true,
+      state: ""
     },
   ],
   contact:{

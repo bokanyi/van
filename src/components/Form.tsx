@@ -224,6 +224,8 @@ export const Form: FC<Props> = ({ setOpen, title, api }) => {
               required
             />
           </div>
+          <p className="text-sm bg-orange ">Felhívjuk figyelmét, hogy a helyszínen csak
+            készpénzzel lehet fizetni.</p>
           <CustomButton
             type="submit"
             onClick={() => handleSubmit}

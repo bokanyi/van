@@ -4,7 +4,6 @@ import { $content } from "../states/content";
 import { Event } from "../components/Event";
 import { notification } from "antd";
 import { Form } from "../components/Form";
-// import { CustomButton } from "../components/CustomButton";
 
 export const Events = () => {
   const content = useGlobal($content);
@@ -25,25 +24,21 @@ export const Events = () => {
 
       {contextHolder}
       {open && <Form setOpen={setOpen} title={title} api={api}></Form>}
-      {/* <div className="flex justify-between">
-        <p className="text-white">
-          Bérlet váltható a helyszínen: 3+1 koncert ajándék 7500 Ft
-        </p>
-        <CustomButton
-          // disabled={}
-          custom="text-white text-left px-2 md:px-6 hover:bg-dark-blue"
-          type="button"
-          onClick={() => (setOpen(!open), setTitle("Bérlet"))}
-        >
-          <p
-            // ref={ref}
-            className="
-              "
-          >
-            bérlet
+      <div className=" max-w-4xl text-white w-screen px-10 lg:px-0 mb-10 flex flex-col md:flex-row md:gap-10 justify-between">
+        <div>
+          <br />
+          <br />
+          <h4>Árak:</h4>
+          <p>Helyszíni jegy: 2500 HUF</p>
+          <p>Regisztrációval: 2000 HUF</p>
+          <p>Bérlet az összes koncertre: 7500 HUF</p>
+          <br />
+          <p>
+            Az összes jegy a helyszínen váltható. Felhívjuk figyelmét, hogy csak
+            készpénzzel lehet fizetni.
           </p>
-        </CustomButton>
-      </div> */}
+        </div>
+      </div>
       {content.events.map((event, index) => {
         return (
           <div className=" max-w-4xl " key={index}>

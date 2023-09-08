@@ -28,20 +28,25 @@ export const Home = () => {
   return (
     <div>
       {!cookieConfirm && <CookiePopup />}
-      {!cookieConfirm && (
+      {
+      !cookieConfirm && 
+      (
         <div
           className={`fixed h-screen w-screen bg-orange z-20 flex flex-col justify-center items-center  
       transition-all duration-300
        ${!visible && "-translate-y-[100vh] "} 
       font-prata italic `}
         >
-          <div className="relative flex flex-col gap-6 p-4">
+          <div className="relative flex flex-col gap-6 p-4 z-10">
             <h1 className="">Veszprémiek a nagyvilágban</h1>
             <h2 className="absolute top-36 right-4  not-italic">
               Koncertsorozat
             </h2>
             <p className="absolute top-52 right-4 not-italic ">2023 ősz</p>
           </div>
+          <div className="h-screen w-screen bg-light-rose rounded-lg content-start fixed z-0">
+  <div className="h-screen w-0 rounded-lg animate-load bg-orange"></div>
+</div>
         </div>
       )}
 

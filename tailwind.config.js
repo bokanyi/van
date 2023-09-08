@@ -64,6 +64,10 @@ export default {
           from: { width: "0" },
           to: { width: "24rem" },
         },
+        load: {
+          "0%": { width: "0" },
+          "100%": { width: "100%" }
+        }
       },
       animation: {
         lineUp: "lineUp 5s ease-out ",
@@ -72,6 +76,7 @@ export default {
         text: "text calc(var(--n)*.3s) steps(var(--n)) forwards;",
         slide: "slide 3.5s   steps(30, end) infinite",
         typing: "4s steps(44) 1s 1 normal both,",
+        load: "load 5s normal forwards",
       },
     },
   },

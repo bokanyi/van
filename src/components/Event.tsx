@@ -63,8 +63,6 @@ export const Event: FC<Props> = ({
           <h3 className="z-10">{event.title}</h3>
           <p className=" ">{event.date}</p>
           <p className=" ">Helyszín: {event.location}</p>
-          <p className=" ">Helyszíni jegy: 2500 HUF</p>
-          <p className=" ">Előregisztrációval: 2000 HUF</p>
         </div>
 
         <div className="gap-10 flex md:flex-col justify-between items-end ">
@@ -88,7 +86,7 @@ export const Event: FC<Props> = ({
                 className="
               "
               >
-                regisztráció
+                előregisztráció
               </p>
             </CustomButton>
             <p>{event.state}</p>
