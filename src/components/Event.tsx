@@ -86,7 +86,7 @@ export const Event: FC<Props> = ({
                 className="
               "
               >
-                előregisztráció
+                regisztráció
               </p>
             </CustomButton>
             <p>{event.state}</p>
