@@ -193,19 +193,24 @@ export const Form: FC<Props> = ({ setOpen, title, api }) => {
 {!emailMatch && (
   <div className="text-red-500">A két e-mail cím nem egyezik!</div>
 )}
-          <label htmlFor="">jegyek:</label>
+<div className="flex gap-10 justify-center">
+
           <select
+          className="self-center "
             id="tickets"
             name="entry.1763473739"
             onChange={handleInputData("entry.1763473739")}
             value={formData["entry.1763473739"]}
           >
             {options.map((value) => (
-              <option value={value} key={value}>
+              <option               
+              value={value} key={value}>
                 {value}
               </option>
             ))}
           </select>
+            <label htmlFor="">db</label>
+</div>
           <div className="flex gap-4">
             <label htmlFor="">
               A regisztrációval elfogadom a Felhasználási feltételeket.
