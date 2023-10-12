@@ -117,7 +117,7 @@ const hungarian: Content = {
         "Tasner Levente",
         "Román Iván",
       ],
-      open: true,
+      open: false,
       state: ""   
 },
     {

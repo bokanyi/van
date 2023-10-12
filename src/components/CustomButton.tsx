@@ -21,7 +21,7 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = ({children, ty
     disabled={disabled}
     type={type}
     className={`
-    flex border-2 border-b-4 rounded-md hover:translate-y-[-0.2rem] hover:border-b-8 absolute right-0 bottom-0
+    flex border-2 border-b-4 rounded-md  ${!disabled && "hover:translate-y-[-0.2rem] hover:border-b-8"} absolute right-0 bottom-0
     transition-all  duration-700  
     px-4 py-2 
     ${custom}  

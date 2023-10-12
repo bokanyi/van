@@ -77,7 +77,7 @@ export const Event: FC<Props> = ({
           <div className="w-44 text-end">
             <CustomButton
               disabled={!event.open}
-              custom="text-white text-left px-2 md:px-6 hover:bg-dark-blue"
+              custom={`text-white text-left px-2 md:px-6 ${event.open? "hover:bg-dark-blue": ""}`}
               type="button"
               onClick={() => (setOpen(!open), setTitle(event.title))}
             >
