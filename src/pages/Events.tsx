@@ -32,6 +32,9 @@ export const Events = () => {
           <p>Helyszíni jegy: 2500 HUF</p>
           <p>Regisztrációval: 2000 HUF</p>
           <p>Bérlet az összes koncertre: 7500 HUF</p>
+          <p>Diák jegy: 1000 HUF</p>
+          <p>Zeneiskolás diák jegy: ingyenes belépés</p>
+          <p>Októberi akció:  2db októberi koncertjegy 3000 HUF</p>
           <br />
           <p>
             Az összes jegy és bérlet a helyszínen váltható. Felhívjuk figyelmét, hogy csak
