@@ -215,7 +215,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
       details: [
         { 
         title:"Classic:",
-        description: "Hordós Johanna (zongora), Lenner Barnabás (klarinét), Kondorosi Karolina (hegedű)" },
+        description: "Hordós Johanna (zongora), Lenner Barnabás (klarinét), Kondorosi Karolina (hegedű), Revóczky Ottília (hegedű)" },
         { 
           title:"Világzene: Nemes Gábor - gitár",
         description: "A koncert középpontjában a gitár sokoldalúságának megmutatása áll. A klasszikus gitár többszólamú technikája olykor kiegészül a modern akusztikus és fingerstyle-gitározás elemeivel. A kompozíciók sokszor népzenei gyökerekből, tradicionális motívumokból építkeznek. A műsorban helyet kap néhány klasszikus értelemben vett népdalfeldolgozás is." },
@@ -230,6 +230,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "hordos_johanna.jpg",
       "04/lenner.jpg",
       "01/kondorosi.jpg",
+      "04/revocky.jpg",
     
     ],
       artists: [
@@ -238,6 +239,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "Hordós Johanna",
       "Lenner Barnabás", 
       "Kondorosi Karolina",
+      "Revóczky Ottília",
     ],
       open: true,
       state: ""
