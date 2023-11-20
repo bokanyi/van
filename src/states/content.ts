@@ -162,7 +162,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "02/fuzessery.jpg",
       ],
       artists: ["Farkas Zoltán","Hordós Johanna", "Füzesséry Zoltán"],
-      open: true,
+      open: false,
       state: ""
     },
     {
@@ -202,7 +202,7 @@ Jelenleg a grazi Zeneakadémia tanára.`,
         "Hartmann Domonkos",
     
     ],
-      open: true,
+      open: false,
       state: ""
     },
     {
