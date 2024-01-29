@@ -6,11 +6,13 @@ import {Location} from './pages/Location'
 import {Navbar} from './components/Navbar'
 import { Footer } from './components/Footer'
 import { Events } from './pages/Events'
+import { Summery } from './pages/Summery'
 
 const App = () => {
 
   return (
     <div className="flex flex-col items-center whitespace-pre-wrap relative">
+      
       <Navbar/>
      <Route path="/" > <Home/></Route>
      <Route path="/about" > <About/></Route>
@@ -18,6 +20,7 @@ const App = () => {
      <Route path="/contact" > <Contact/></Route>
      <Route path="/location" > <Location/></Route>
      <Route path="/events" > <Events/></Route>
+     <Route path="/summery" > <Summery/></Route>
      <Footer/>
     </div>
   )

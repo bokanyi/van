@@ -39,6 +39,17 @@ export const Navbar = () => {
           <button
           className="text-end"
           onClick={() => {
+            navigate("/summery"),
+            setMenuOpen(!menuOpen)
+            ;
+          }}
+          >
+          <p>ÖSSZEGZÉS</p>
+          </button>
+          <hr />
+          <button
+          className="text-end"
+          onClick={() => {
             navigate("/events"),
             setMenuOpen(!menuOpen)
             ;
